@@ -1,0 +1,33 @@
+{
+  "functions": [
+    {
+      "id": "echo",
+      "name": "Echo Function",
+      "description": "Echoes back whatever message you send to it.",
+      "endpoint": "https://YOUR_API_GATEWAY_URL/echo",
+      "method": "POST",
+      "inputFields": [
+        { "name": "message", "label": "Message", "type": "text", "placeholder": "Hello world" }
+      ]
+    },
+    {
+      "id": "add-numbers",
+      "name": "Add Numbers",
+      "description": "Adds two numbers together and returns the sum.",
+      "endpoint": "https://YOUR_API_GATEWAY_URL/add",
+      "method": "POST",
+      "inputFields": [
+        { "name": "a", "label": "Number A", "type": "number", "placeholder": "0" },
+        { "name": "b", "label": "Number B", "type": "number", "placeholder": "0" }
+      ]
+    },
+    {
+      "id": "get-time",
+      "name": "Get Server Time",
+      "description": "Returns the current server time from Lambda.",
+      "endpoint": "https://YOUR_API_GATEWAY_URL/time",
+      "method": "GET",
+      "inputFields": []
+    }
+  ]
+}
