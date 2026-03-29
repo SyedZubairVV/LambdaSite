@@ -1,32 +1,23 @@
 {
   "functions": [
     {
-      "id": "echo",
-      "name": "Echo Function",
-      "description": "Echoes back whatever message you send to it.",
-      "endpoint": "https://YOUR_API_GATEWAY_URL/echo",
+      "id": "save-text",
+      "name": "Save Text to Storage",
+      "description": "Saves text content as a file in Azure Blob Storage.",
+      "endpoint": "https://my-text-functions-hgashhdnhacrcmcv.canadacentral-01.azurewebsites.net/api/SaveText?code=IaIW37y9dqI4NQzc3Z08nwGrIqxNEAP2BjFGmUZ0ohK5AzFuRNfkEA==",
       "method": "POST",
       "inputFields": [
-        { "name": "message", "label": "Message", "type": "text", "placeholder": "Hello world" }
+        { "name": "filename", "label": "Filename", "type": "text", "placeholder": "my-note.txt" },
+        { "name": "text", "label": "Text Content", "type": "textarea", "placeholder": "Enter your text here..." }
       ]
     },
     {
-      "id": "add-numbers",
-      "name": "Add Numbers",
-      "description": "Adds two numbers together and returns the sum.",
-      "endpoint": "https://YOUR_API_GATEWAY_URL/add",
-      "method": "POST",
-      "inputFields": [
-        { "name": "a", "label": "Number A", "type": "number", "placeholder": "0" },
-        { "name": "b", "label": "Number B", "type": "number", "placeholder": "0" }
-      ]
-    },
-    {
-      "id": "get-time",
-      "name": "Get Server Time",
-      "description": "Returns the current server time from Lambda.",
-      "endpoint": "https://YOUR_API_GATEWAY_URL/time",
-      "method": "GET",
+      "id": "file-browser",
+      "name": "File Browser",
+      "description": "Browse and read files stored in Azure Blob Storage.",
+      "type": "file-browser",
+      "listEndpoint": "https://my-text-functions-hgashhdnhacrcmcv.canadacentral-01.azurewebsites.net/api/ListFiles?code=r87e6VNPOF6p1AMKli1z2RDmb5N6cqJ5dG1ApQ1GYxlKAzFuejo7Sg==",
+      "getEndpoint": "https://my-text-functions-hgashhdnhacrcmcv.canadacentral-01.azurewebsites.net/api/GetFile?code=jXauD8pB5TtAGDToNlG9WyfrruTbfv3JjnyQHU8tqbxZAzFu2tGHwA==",
       "inputFields": []
     }
   ]

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import FunctionCard from './components/FunctionCard'
+import FileBrowserCard from './components/FileBrowserCard'
 
 export default function App() {
   const [functions, setFunctions] = useState([])
@@ -28,9 +29,13 @@ export default function App() {
           <p className="status">No functions configured yet. Add some to <code>public/lambda-config.json</code>.</p>
         )}
         <div className="grid">
-          {functions.map((fn) => (
-            <FunctionCard key={fn.id} fn={fn} />
-          ))}
+          {functions.map((fn) =>
+            fn.type === 'file-browser' ? (
+              <FileBrowserCard key={fn.id} fn={fn} />
+            ) : (
+              <FunctionCard key={fn.id} fn={fn} />
+            )
+          )}
         </div>
       </main>
     </div>

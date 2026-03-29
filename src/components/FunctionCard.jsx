@@ -58,13 +58,23 @@ export default function FunctionCard({ fn }) {
           {fn.inputFields.map((field) => (
             <div key={field.name} className="field">
               <label htmlFor={`${fn.id}-${field.name}`}>{field.label}</label>
-              <input
-                id={`${fn.id}-${field.name}`}
-                type={field.type || 'text'}
-                placeholder={field.placeholder || ''}
-                value={values[field.name] || ''}
-                onChange={(e) => handleChange(field.name, e.target.value)}
-              />
+              {field.type === 'textarea' ? (
+                <textarea
+                  id={`${fn.id}-${field.name}`}
+                  placeholder={field.placeholder || ''}
+                  value={values[field.name] || ''}
+                  onChange={(e) => handleChange(field.name, e.target.value)}
+                  rows={5}
+                />
+              ) : (
+                <input
+                  id={`${fn.id}-${field.name}`}
+                  type={field.type || 'text'}
+                  placeholder={field.placeholder || ''}
+                  value={values[field.name] || ''}
+                  onChange={(e) => handleChange(field.name, e.target.value)}
+                />
+              )}
             </div>
           ))}
         </div>
