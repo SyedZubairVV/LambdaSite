@@ -4,7 +4,7 @@
       "id": "save-text",
       "name": "Save Text to Storage",
       "description": "Saves text content as a file in Azure Blob Storage.",
-      "endpoint": "https://my-text-functions-hgashhdnhacrcmcv.canadacentral-01.azurewebsites.net/api/SaveText?code=IaIW37y9dqI4NQzc3Z08nwGrIqxNEAP2BjFGmUZ0ohK5AzFuRNfkEA==",
+      "endpoint": "REPLACE_ME",
       "method": "POST",
       "inputFields": [
         { "name": "filename", "label": "Filename", "type": "text", "placeholder": "my-note.txt" },
@@ -16,8 +16,8 @@
       "name": "File Browser",
       "description": "Browse and read files stored in Azure Blob Storage.",
       "type": "file-browser",
-      "listEndpoint": "https://my-text-functions-hgashhdnhacrcmcv.canadacentral-01.azurewebsites.net/api/ListFiles?code=r87e6VNPOF6p1AMKli1z2RDmb5N6cqJ5dG1ApQ1GYxlKAzFuejo7Sg==",
-      "getEndpoint": "https://my-text-functions-hgashhdnhacrcmcv.canadacentral-01.azurewebsites.net/api/GetFile?code=jXauD8pB5TtAGDToNlG9WyfrruTbfv3JjnyQHU8tqbxZAzFu2tGHwA==",
+      "listEndpoint": "REPLACE_ME",
+      "getEndpoint": "REPLACE_ME",
       "inputFields": []
     }
   ]

@@ -25,6 +25,9 @@ jobs:
         run: npm run build
         env:
           VITE_BASE_URL: /${{ github.event.repository.name }}/
+          VITE_SAVE_URL: ${{ secrets.VITE_SAVE_URL }}
+          VITE_LIST_URL: ${{ secrets.VITE_LIST_URL }}
+          VITE_GET_URL: ${{ secrets.VITE_GET_URL }}
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
