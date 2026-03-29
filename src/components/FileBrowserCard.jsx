@@ -54,7 +54,7 @@ export default function FileBrowserCard({ fn }) {
 
       {fn.description && <p className="description">{fn.description}</p>}
 
-      <div className="endpoint">{fn.listEndpoint}</div>
+      <div className="endpoint">{new URL(fn.listEndpoint).pathname.replace('/api/', '')}</div>
 
       <button className="call-btn" onClick={loadFiles} disabled={loadingList}>
         {loadingList ? 'Loading...' : 'Load Files'}

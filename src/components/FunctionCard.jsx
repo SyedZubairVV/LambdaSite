@@ -51,7 +51,7 @@ export default function FunctionCard({ fn }) {
 
       {fn.description && <p className="description">{fn.description}</p>}
 
-      <div className="endpoint">{fn.endpoint}</div>
+      <div className="endpoint">{new URL(fn.endpoint).pathname.replace('/api/', '')}</div>
 
       {fn.inputFields.length > 0 && (
         <div className="fields">
